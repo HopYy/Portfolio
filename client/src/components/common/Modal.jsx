@@ -18,7 +18,7 @@ export default function Modal({ open, onClose, children }) {
           event.stopPropagation();
         }}
         className={`
-          mx-2 px-10 relative flex flex-col bg-thrid-color rounded-xl shadow transition-all
+          mx-2 px-10 relative flex flex-col bg-second-color rounded-xl shadow transition-all
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >
