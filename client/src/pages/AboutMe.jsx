@@ -14,7 +14,7 @@ const cards = [
   },
 ];
 
-const Home = () => {
+const AboutMe = () => {
   return (
     <div className="p-8 overflow-auto space-y-8">
       <div>
@@ -124,4 +124,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AboutMe;

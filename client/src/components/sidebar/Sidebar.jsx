@@ -2,6 +2,7 @@ import { Mail, Smartphone, Cake, MapPin, Linkedin, Github } from "lucide-react";
 
 import InfoCard from "../cards/InfoCard";
 import Avatar from "../../assets/avatar.jpg";
+import SocialLinks from "../cards/SocialLinks";
 
 const cards = [
   {
@@ -53,22 +54,12 @@ const Sidebar = () => {
         ))}
       </div>
       <div className="flex justify-center items-center gap-4 my-2 2xl:my-10">
-        <a
-          href="https://www.linkedin.com/in/stipe-bo%C5%A1njak/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-third-color transition-colors p-2 rounded-lg border border-transparent hover:border-white"
-        >
+        <SocialLinks href="https://www.linkedin.com/in/stipe-bo%C5%A1njak/">
           <Linkedin color="gray" size={17} />
-        </a>
-        <a
-          href="https://github.com/HopYy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-third-color transition-colors p-2 rounded-lg border border-transparent hover:border-white"
-        >
+        </SocialLinks>
+        <SocialLinks href="https://github.com/HopYy">
           <Github color="gray" size={17} />
-        </a>
+        </SocialLinks>
       </div>
     </div>
   );
