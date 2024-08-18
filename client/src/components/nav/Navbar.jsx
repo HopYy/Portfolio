@@ -30,14 +30,14 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <div className="flex-1 max-h-16 flex justify-between items-start">
-      <h1 className="text-2xl text-white font-bold m-8">{title}</h1>
+    <div className="flex-1 flex justify-between items-start">
+      <h1 className="text-2xl text-white font-bold m-8 whitespace-nowrap">{title}</h1>
       <nav className="bg-third-color w-fit px-10 py-8 rounded-bl-xl">
         <ul className="flex items-center gap-16">
           {links.map((link) => (
             <li
               key={link.href}
-              className={`text-sm font-semibold transition-colors hover:text-white ${
+              className={`text-sm font-semibold transition-colors hover:text-white whitespace-nowrap ${
                 location.pathname === link.href ? "text-white" : "text-gray-300"
               }`}
             >

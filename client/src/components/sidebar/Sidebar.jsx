@@ -4,7 +4,7 @@ import Avatar from "../../assets/avatar.jpg";
 
 const Sidebar = () => {
   return (
-    <div className="max-w-80 grow rounded-xl bg-second-color pt-16 p-5 flex flex-col items-center">
+    <div className="max-w-80 grow rounded-xl bg-second-color 2xl:pt-16 p-5 flex flex-col items-center">
       <div className="flex flex-col items-center border-b-2 border-third-color pb-5">
         <div className="w-36 h-w-36 overflow-hidden rounded-3xl">
           <img
@@ -21,7 +21,7 @@ const Sidebar = () => {
           <span className="text-sm text-white select-none">Web developer</span>
         </div>
       </div>
-      <div className="pt-5 flex-1 flex flex-col justify-between">
+      <div className="pt-5 flex-1 flex flex-col justify-between space-y-2 overflow-auto">
         <div className="flex items-center w-full max-w-full space-x-4">
           <div className="bg-third-color p-3.5 rounded-xl shrink-0">
             <Mail color="white" size={20} />
@@ -67,7 +67,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-4 my-10">
+      <div className="flex justify-center items-center gap-4 my-2 2xl:my-10">
         <a
           href="https://www.linkedin.com/in/stipe-bo%C5%A1njak/"
           target="_blank"
