@@ -1,6 +1,30 @@
 import { Mail, Smartphone, Cake, MapPin, Linkedin, Github } from "lucide-react";
 
+import InfoCard from "../cards/InfoCard";
 import Avatar from "../../assets/avatar.jpg";
+
+const cards = [
+  {
+    title: "EMAIL",
+    text: "stipebosnjakweb@gmail.com",
+    element: <Mail color="white" size={20} />,
+  },
+  {
+    title: "PHONE",
+    text: "+385 99 487 0052",
+    element: <Smartphone color="white" size={20} />,
+  },
+  {
+    title: "BIRTHDAY",
+    text: "May 26, 2005",
+    element: <Cake color="white" size={20} />,
+  },
+  {
+    title: "LOCATION",
+    text: "Sinj, Croatia",
+    element: <MapPin color="white" size={20} />,
+  },
+];
 
 const Sidebar = () => {
   return (
@@ -22,50 +46,11 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="pt-5 flex-1 flex flex-col justify-between space-y-2 overflow-auto">
-        <div className="flex items-center w-full max-w-full space-x-4">
-          <div className="bg-third-color p-3.5 rounded-xl shrink-0">
-            <Mail color="white" size={20} />
-          </div>
-          <div className="flex flex-col justify-center flex-1 overflow-hidden">
-            <h1 className="text-gray-300 text-sm font-semibold">EMAIL</h1>
-            <h1 className="text-white text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
-              stipebosnjakweb@gmail.com
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-center w-full max-w-full  space-x-4">
-          <div className="bg-third-color p-3.5 rounded-xl shrink-0">
-            <Smartphone color="white" size={20} />
-          </div>
-          <div className="flex flex-col justify-center flex-1 overflow-hidden">
-            <h1 className="text-gray-300 text-sm font-semibold">PHONE</h1>
-            <h1 className="text-white text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
-              +385 99 487 0052
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-center w-full max-w-full space-x-4">
-          <div className="bg-third-color p-3.5 rounded-xl shrink-0">
-            <Cake color="white" size={20} />
-          </div>
-          <div className="flex flex-col justify-center flex-1 overflow-hidden">
-            <h1 className="text-gray-300 text-sm font-semibold">BIRTHDAY</h1>
-            <h1 className="text-white text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
-              May 26, 2005
-            </h1>
-          </div>
-        </div>
-        <div className="flex items-center w-full max-w-full space-x-4">
-          <div className="bg-third-color p-3.5 rounded-xl shrink-0">
-            <MapPin color="white" size={20} />
-          </div>
-          <div className="flex flex-col justify-center flex-1 overflow-hidden">
-            <h1 className="text-gray-300 text-sm font-semibold">LOCATION</h1>
-            <h1 className="text-white text-sm font-semibold whitespace-nowrap overflow-hidden text-ellipsis">
-              Sinj, Croatia
-            </h1>
-          </div>
-        </div>
+        {cards.map((card) => (
+          <InfoCard key={card.title} title={card.title} text={card.text}>
+            {card.element}
+          </InfoCard>
+        ))}
       </div>
       <div className="flex justify-center items-center gap-4 my-2 2xl:my-10">
         <a

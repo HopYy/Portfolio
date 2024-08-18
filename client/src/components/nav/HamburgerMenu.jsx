@@ -7,7 +7,7 @@ const HamburgerMenu = ({ links }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="xl:hidden relative">
       <div
         className="cursor-pointer mr-8 mt-8 mb-3 p-2 rounded-lg bg-third-color"
         onClick={() => {

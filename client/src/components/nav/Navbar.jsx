@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <div className="flex-1 flex justify-between items-start">
+    <div className="flex justify-between items-start">
       <h1 className="text-2xl text-white font-bold m-8 whitespace-nowrap">
         {title}
       </h1>
