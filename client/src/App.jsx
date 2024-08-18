@@ -10,7 +10,7 @@ function App() {
       <div className="bg-main-color h-screen flex">
         <div className="m-10 flex-1 flex gap-5">
           <Sidebar />
-          <div className="flex-1 flex flex-col gap-y-5 bg-second-color rounded-xl overflow-hidden">
+          <div className="flex-1 flex flex-col gap-y-5 bg-second-color rounded-xl">
             <Navbar />
             <Routes>
               {routes.map((route) => (

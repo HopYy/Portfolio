@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu";
 
 const links = [
   {
@@ -31,8 +32,10 @@ const Navbar = () => {
 
   return (
     <div className="flex-1 flex justify-between items-start">
-      <h1 className="text-2xl text-white font-bold m-8 whitespace-nowrap">{title}</h1>
-      <nav className="bg-third-color w-fit px-10 py-8 rounded-bl-xl">
+      <h1 className="text-2xl text-white font-bold m-8 whitespace-nowrap">
+        {title}
+      </h1>
+      <nav className="bg-third-color w-fit px-10 py-8 rounded-bl-xl max-xl:hidden">
         <ul className="flex items-center gap-16">
           {links.map((link) => (
             <li
@@ -46,6 +49,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
+      <HamburgerMenu links={links} />
     </div>
   );
 };

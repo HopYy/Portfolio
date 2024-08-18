@@ -29,4 +29,5 @@ html {
 
 body {
     height: -webkit-fill-available;
+    overflow: hidden;
 }
