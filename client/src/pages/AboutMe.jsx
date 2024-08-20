@@ -1,7 +1,9 @@
-import { Camera, Video } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Camera, Github, Linkedin, Video } from "lucide-react";
+
 import InfoCard from "../components/cards/InfoCard";
 
-const cards = [
+const aboutCards = [
   {
     title: "PHOTOSHOP",
     text: "I have experience with Photoshop, where I focus on creating high-quality images.",
@@ -11,6 +13,21 @@ const cards = [
     title: "VIDEO EDITING",
     text: "I enjoy video editing and take pride in producing well-edited videos.",
     element: <Video color="white" size={20} />,
+  },
+];
+
+const socialCards = [
+  {
+    title: "LINKEDIN",
+    text: "Follow me on LinkedIn",
+    href: "https://www.linkedin.com/in/stipe-bo%C5%A1njak/",
+    element: <Linkedin color="white" size={20} />,
+  },
+  {
+    title: "GITHUB",
+    text: "Follow me on Github",
+    href: "https://github.com/HopYy",
+    element: <Github color="white" size={20} />,
   },
 ];
 
@@ -41,7 +58,7 @@ const AboutMe = () => {
         <h1 className="text-2xl text-white font-bold mb-4">
           Languages and Tools:
         </h1>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <img
             align="left"
             alt="JavaScript"
@@ -110,14 +127,26 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-4 max-lg:hidden">
         <h1 className="text-2xl text-white font-bold whitespace-nowrap my-4">
-          More about me
+          More About Me
         </h1>
-        {cards.map((card) => (
+        {aboutCards.map((card) => (
           <InfoCard key={card.title} title={card.title} text={card.text}>
             {card.element}
           </InfoCard>
+        ))}
+      </div>
+      <div className="flex flex-col gap-y-4">
+        <h1 className="text-2xl text-white font-bold whitespace-nowrap my-4">
+          Find Me Online
+        </h1>
+        {socialCards.map((card) => (
+          <Link to={card.href} target="_blank" rel="noopener noreferrer">
+            <InfoCard key={card.title} title={card.title} text={card.text}>
+              {card.element}
+            </InfoCard>
+          </Link>
         ))}
       </div>
     </div>

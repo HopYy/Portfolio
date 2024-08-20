@@ -9,7 +9,7 @@ const HamburgerMenu = ({ links }) => {
   return (
     <div className="xl:hidden relative">
       <div
-        className="cursor-pointer mr-8 mt-8 mb-3 p-2 rounded-lg bg-third-color"
+        className="cursor-pointer mr-8 mt-8 md:mt-10 mb-3 p-2 rounded-lg bg-third-color"
         onClick={() => {
           setOpenMenu(!openMenu);
         }}

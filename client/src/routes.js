@@ -4,10 +4,10 @@ import Projects from "./pages/Projects";
 export const routes = [
     {
         path: "/",
-        element: <AboutMe />
+        element: <Projects />
     },
     {
-        path: "/projects",
-        element: <Projects />
-    }
+        path: "/about",
+        element: <AboutMe />
+    },
 ]

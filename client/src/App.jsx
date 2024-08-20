@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <div className="bg-main-color h-screen flex">
-        <div className="m-10 flex-1 flex gap-5">
+        <div className="md:m-10 flex-1 flex gap-5">
           <Sidebar />
-          <div className="flex-1 flex flex-col gap-y-5 bg-second-color rounded-xl">
+          <div className="flex-1 flex flex-col gap-y-5 bg-second-color md:rounded-xl">
             <Navbar />
             <Routes>
               {routes.map((route) => (

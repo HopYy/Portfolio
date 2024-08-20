@@ -11,16 +11,17 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <div
-        className="space-y-2 w-1/3 cursor-pointer"
+        className="cursor-pointer transition-all hover:bg-third-color p-4 rounded-xl md:hover:scale-105"
         onClick={() => {
           setOpen(true);
         }}
       >
-        <div className="w-full h-full rounded-lg overflow-hidden">
+        <div className="w-full rounded-lg overflow-hidden">
           <img
-            className="object-cover object-center transition-all hover:scale-110"
+            className="object-cover object-center"
             src={project.img}
             alt="Project"
+            loading="lazy"
           />
         </div>
         <h1 className="text-base text-white font-semibold">{project.name}</h1>

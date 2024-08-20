@@ -4,21 +4,13 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const links = [
   {
-    label: "About me",
+    label: "PROJECTS",
     href: "/",
   },
   {
-    label: "Projects",
-    href: "/projects",
-  },
-  {
-    label: "Resume",
-    href: "/resume",
-  },
-  {
-    label: "Contact me",
-    href: "/contact",
-  },
+    label: "ABOUT ME",
+    href: "/about",
+  } 
 ];
 
 const Navbar = () => {
