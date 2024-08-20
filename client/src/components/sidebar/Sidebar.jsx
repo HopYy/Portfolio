@@ -91,7 +91,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col justify-between overflow-auto">
-          <div className="pt-5 xl:flex-1 flex flex-col justify-between space-y-4 max-w-full min-w-0">
+          <div className="pt-5 flex flex-col justify-between space-y-4 max-w-full min-w-0">
             {cards.map((card) => (
               <InfoCard key={card.title} title={card.title} text={card.text}>
                 {card.element}
