@@ -30,24 +30,28 @@ const ProjectCard = ({ project }) => {
         </span>
       </div>
       <Modal
-        open={open}
+        open={open && (project.href || project.github)}
         onClose={() => {
           setOpen(false);
         }}
       >
-        <div className="flex gap-4">
-          <Link to={project.href} target="_blank" rel="noopener noreferrer">
-            <Button variant="white">
-              <span>Live APP</span>
-              <Signal color="black" size={20} />
-            </Button>
-          </Link>
-          <Link to={project.github} target="_blank" rel="noopener noreferrer">
-            <Button variant="black">
-              <span>Github</span>
-              <Github color="white" size={20} />
-            </Button>
-          </Link>
+        <div className="flex justify-center gap-4">
+          {project.href && (
+            <Link to={project.href} target="_blank" rel="noopener noreferrer">
+              <Button variant="white">
+                <span>Live APP</span>
+                <Signal color="black" size={20} />
+              </Button>
+            </Link>
+          )}
+          {project.github && (
+            <Link to={project.github} target="_blank" rel="noopener noreferrer">
+              <Button variant="black">
+                <span>Github</span>
+                <Github color="white" size={20} />
+              </Button>
+            </Link>
+          )}
         </div>
       </Modal>
     </>

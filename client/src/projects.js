@@ -12,7 +12,7 @@ export const projects = [
     {
         name: "SWAPZ Marketplace Platform",
         description: "SWAPZ is a online marketplace platform for users to buy or sell their products.",
-        href: "https://app-convo.netlify.app/",
+        href: null,
         github: "https://github.com/HopYy/swapz",
         img: Swapz
     }
