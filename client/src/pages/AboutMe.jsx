@@ -2,6 +2,30 @@ import { Link } from "react-router-dom";
 import { Camera, Github, Linkedin, Video } from "lucide-react";
 
 import InfoCard from "../components/cards/InfoCard";
+import NoteCard from "../components/cards/NoteCard";
+
+const personalInfo = [
+  { note: "Stipe Bošnjak", golden: false },
+  { note: "19-year-old developer", golden: false },
+  { note: "Frontend", golden: true },
+  { note: "3 years of experience", golden: false },
+  { note: "Sinj, Croatia", golden: false },
+];
+
+const technologies = [
+  { note: "JavaScript", golden: true },
+  { note: "TypeScript", golden: false },
+  { note: "React", golden: true },
+  { note: "Redux", golden: false },
+  { note: "Next.js", golden: false },
+  { note: "Angular", golden: false },
+  { note: "SCSS", golden: false },
+  { note: "Tailwind", golden: false },
+  { note: "Node.js", golden: true },
+  { note: "Express.js", golden: false },
+  { note: "MongoDB", golden: true },
+  { note: "MySQL", golden: false },
+];
 
 const aboutCards = [
   {
@@ -33,98 +57,29 @@ const socialCards = [
 
 const AboutMe = () => {
   return (
-    <div className="p-8 overflow-auto space-y-8">
-      <div>
-        <p className="text-gray-200 font-semibold">
-          Hi, I'm Stipe Bošnjak, a 19-year-old web developer. My journey into
-          coding began four years ago with a playful experiment on YouTube that
-          sparked a lasting interest in web development. Over time, I learned
-          HTML, CSS, and JavaScript, and spent countless hours improving my
-          skills. Although I took a brief break, I returned with even more
-          dedication and eventually started freelancing on Upwork and Fiverr,
-          gaining valuable experience working with clients.
-        </p>
-        <br />
-        <p className="text-gray-200 font-semibold">
-          I focus on creating websites that are both functional and
-          user-friendly. I believe in writing clean, efficient code to ensure
-          that every site I build works well and provides a smooth experience
-          for users. Whether it's designing a simple layout or tackling a more
-          complex project, I always aim to deliver a product that meets the
-          needs of both clients and users.
-        </p>
+    <div className="pb-8 px-8 overflow-auto space-y-8">
+      <div className="flex items-center gap-4">
+        <div className="bg-yellow-400 rounded-full w-3 h-3" />
+        <span className="text-xs text-white font-semibold">specialized in</span>
       </div>
       <div>
-        <h1 className="text-2xl text-white font-bold mb-4">
-          Languages and Tools:
+        <h1 className="text-xl text-white font-semibold my-4">
+          Personal Information 
         </h1>
-        <div className="flex flex-wrap gap-4">
-          <img
-            align="left"
-            alt="JavaScript"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-          />
-          <img
-            align="left"
-            alt="TypeScript"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
-          />
-          <img
-            align="left"
-            alt="React"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-          />
-          <img
-            align="left"
-            alt="Next"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
-          />
-          <img
-            align="left"
-            alt="Redux"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
-          />
-          <img
-            align="left"
-            alt="HTML"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
-          />
-          <img
-            align="left"
-            alt="CSS"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
-          />
-          <img
-            align="left"
-            alt="TailwindCSS"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-          />
-          <img
-            align="left"
-            alt="NodeJS"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-          />
-          <img
-            align="left"
-            alt="MongoDB"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-          />
-          <img
-            align="left"
-            alt="MySQL"
-            width="30px"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-          />
+        <div className="flex flex-wrap items-center gap-4">
+          {personalInfo.map((info) => (
+            <NoteCard note={info.note} golden={info.golden} />
+          ))}
+        </div>
+      </div>
+      <div>
+        <h1 className="text-xl text-white font-semibold my-4">
+          Languages and Tools
+        </h1>
+        <div className="flex flex-wrap items-center gap-4">
+          {technologies.map((info) => (
+            <NoteCard note={info.note} golden={info.golden} />
+          ))}
         </div>
       </div>
       <div className="space-y-4 max-lg:hidden">
