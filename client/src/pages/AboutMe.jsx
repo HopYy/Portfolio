@@ -25,6 +25,7 @@ const technologies = [
   { note: "Express.js", golden: false },
   { note: "MongoDB", golden: true },
   { note: "MySQL", golden: false },
+  { note: "Git", golden: false }
 ];
 
 const aboutCards = [
