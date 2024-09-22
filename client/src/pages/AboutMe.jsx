@@ -6,8 +6,7 @@ import NoteCard from "../components/cards/NoteCard";
 
 const personalInfo = [
   { note: "Stipe Bošnjak", golden: false },
-  { note: "19-year-old developer", golden: false },
-  { note: "Frontend", golden: true },
+  { note: "Fullstack", golden: true },
   { note: "3 years of experience", golden: false },
   { note: "Sinj, Croatia", golden: false },
 ];
@@ -17,6 +16,7 @@ const technologies = [
   { note: "TypeScript", golden: false },
   { note: "React", golden: true },
   { note: "Redux", golden: false },
+  { note: "Zustand", golden: false },
   { note: "Next.js", golden: false },
   { note: "Angular", golden: false },
   { note: "SCSS", golden: false },
